@@ -84,3 +84,10 @@ bindkey -v
 # Exporting PATH evnironment variable to shell
 PATH="/Users/itseytlin/Projects/bin:$PATH"
 export PATH
+
+############################################################
+#
+# Functions
+# 
+function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }
+############################################################
