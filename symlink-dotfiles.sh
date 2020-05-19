@@ -1,11 +1,32 @@
-#!/bin/bash
+#!/bin/zsh
 	
-if [[ $# != 3 ]]; then
-	echo "Usage: [symlink-dotfiles.sh] [dotfiles source dir] [destination dir]"
+# function that creates an absolute path from a relative one for files and folders
+function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }
+
+# Ensure that 2 arguments are passed
+if [[ $# != 2 ]] ; then
+	echo "Usage: ./symlink-dotfiles.sh dotfiles-source-dir destination-dir"
 	return 1;
 fi
 
-dotfiles-dir=$2
-homedir=$3
-for file in ~/Projects/dotfiles/* ; do
-	echo $file 
+# Get directories to work with
+DOTFILES="$1"
+HOMEDIR="$2"
+
+# Move all dotfiles to HOMEDIR
+echo "Symbolic linking dotfiles in $1 to directory $2."
+for FILE in $DOTFILES/* ; do
+	NAME=$(basename $(realpath $FILE))
+	if [[ $NAME == .git ]] ; then
+		 							# ignoring git
+	elif [[ $NAME == symlink-dotfiles.sh ]] ; then
+									# ignoring script
+	elif [[ -d $FILE ]] ; then
+									# ignoring directories 
+	else  
+		#echo "file: $FILE -> ln arguments:"
+		#echo "$FILE $HOMEDIR"
+		echo "ln -s -iv $(realpath $FILE) $(realpath $HOMEDIR)/.$NAME" 
+	fi
+done	
+
