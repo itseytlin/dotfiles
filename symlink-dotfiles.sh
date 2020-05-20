@@ -24,8 +24,8 @@ for FILE in $DOTFILES/* ; do
 	elif [[ -d $FILE ]] ; then
 		# ignoring directories 
 	else  
-		# interactive symbolic link creation from file to ~/.file
-		ln -s -i $(realpath $FILE) $(realpath $HOMEDIR)/.$NAME 
+		# symbolic link creation from file to ~/.file
+		ln -s  $(realpath $FILE) $(realpath $HOMEDIR)/.$NAME 
 	fi
 done	
 
