@@ -67,7 +67,10 @@ set noerrorbells visualbell t_vb=
 " Enable autoindent feature
 set autoindent
 
-
+" Set tabulation size
+set shiftwidth=4
+set tabstop=4
+set softtabstop=0 noexpandtab
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
