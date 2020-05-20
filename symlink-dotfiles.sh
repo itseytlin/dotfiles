@@ -1,6 +1,6 @@
 #!/bin/zsh
 	
-# function that creates an absolute path from a relative one for files and folders
+# Function that creates an absolute path from a relative one for files and folders
 function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }
 
 # Ensure that 2 arguments are passed
@@ -18,15 +18,14 @@ echo "Symbolic linking dotfiles in $1 to directory $2."
 for FILE in $DOTFILES/* ; do
 	NAME=$(basename $(realpath $FILE))
 	if [[ $NAME == .git ]] ; then
-		 							# ignoring git
+		# ignoring git
 	elif [[ $NAME == symlink-dotfiles.sh ]] ; then
-									# ignoring script
+		# ignoring script
 	elif [[ -d $FILE ]] ; then
-									# ignoring directories 
+		# ignoring directories 
 	else  
-		#echo "file: $FILE -> ln arguments:"
-		#echo "$FILE $HOMEDIR"
-		echo "ln -s -iv $(realpath $FILE) $(realpath $HOMEDIR)/.$NAME" 
+		# interactive symbolic link creation from file to ~/.file
+		ln -s -i $(realpath $FILE) $(realpath $HOMEDIR)/.$NAME 
 	fi
 done	
 
