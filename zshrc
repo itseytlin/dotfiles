@@ -1,3 +1,4 @@
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/itseytlin/.oh-my-zsh"
 
@@ -5,7 +6,7 @@ export ZSH="/Users/itseytlin/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=dieter
+ZSH_THEME="dieter"
 
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
@@ -67,6 +68,8 @@ alias cdic="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 # more useful aliases
 alias mv="mv -i"
 alias ll="ls -lah"
+alias up="cd .."
+alias la="ls -a"
 
 #
 # git aliases
@@ -75,7 +78,7 @@ alias gl="git log --all --graph --decorate --oneline"
 ############################################################
 #
 # VIM editing mode for the command line
-bindkey -v
+#bindkey -v
 
 #
 # Exporting PATH evnironment variable to shell
@@ -88,3 +91,4 @@ export PATH
 # 
 function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }
 ############################################################
+

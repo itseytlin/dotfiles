@@ -21,6 +21,10 @@ for FILE in $DOTFILES/* ; do
 		# ignoring git
 	elif [[ $NAME == symlink-dotfiles.sh ]] ; then
 		# ignoring script
+	elif [[ $NAME == fish ]] ; then
+		echo "fish goes to ~/.config/fish"
+		mkdir $(realpath $HOMEDIR)/.config
+		ln -s $(realpath $FILE) $(realpath $HOMEDIR)/.config/$NAME
 	elif [[ -d $FILE ]] ; then
 		# ignoring directories 
 	else  
