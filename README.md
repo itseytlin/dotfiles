@@ -1,6 +1,12 @@
 ## Configuration files
 This repo contains Ivan's config files for his shells, vim, and tmux. These are quite primitive, yet look nice and have a couple of features.
 
+#### fish
+Folder `fish` containts a couple of useful fish functions: 
+- `realpath` returns absolute path of a file or folder provided
+- `gl` and `glo` are variations on git log decorations
+- `gs` is git status
+
 #### zshrc
 This zshrc is targeted at oh-my-zsh configurationns of the shell. It utilizes a couple of plugins and a theme included with the package. There are aliases for a quick configuration of the rc files and a few other cd and git shortcuts. A function realpath that gives an absodute path of a file or folder provided to it as an argument is defined.
 
@@ -13,6 +19,8 @@ First folder should contain config files formatted without a leading `.`. The sc
 Example usage of the script:
 ``./symlink-dotfiles.sh ./ ~``
 would symlink files in the directory of the script to your home directory.
+**`Fish` folder** will be synched with `~/.config/fish`, where `~` is the target symlink directory provided.
 
 ### Note!
 Ivan doesn't have much experience with scripting. He hopes he did enough research not to explode the machine running it, but please be careful. 
+
