@@ -1,7 +1,7 @@
 #
 # STARTUP FUNCTIONS
 if status --is-login														# Export ENV variables
-    set -x PATH $PATH ~/Projects/bin/  												# Projects/bin
+    set -x PATH $PATH ~/data/projects/bin/  												# Projects/bin
 	set -x PATH $PATH /Library/Frameworks/Python.framework/Versions/3.7/bini		# python path
 end
 
