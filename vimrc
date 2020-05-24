@@ -11,6 +11,7 @@
 " `vim -u foo`).
 set nocompatible
 
+
 " Turn on syntax highlighting.
 syntax on
 
@@ -87,4 +88,24 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+"Gruvbox theme
+Plug 'morhetz/gruvbox'
+
+Plug 'cocopon/iceberg.vim'
+" I like this one its green, but ok
+
+" Initialize plugin system
+call plug#end()
+
+
+colorscheme koehler 
 
