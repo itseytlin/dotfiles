@@ -98,14 +98,21 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 "Gruvbox theme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 
-Plug 'cocopon/iceberg.vim'
+"Plug 'cocopon/iceberg.vim'
 " I like this one its green, but ok
+Plug 'arcticicestudio/nord-vim'
 
+Plug 'vim-airline/vim-airline'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
 
-colorscheme koehler 
+colorscheme nord
 

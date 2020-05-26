@@ -92,3 +92,5 @@ export PATH
 function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }
 ############################################################
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
