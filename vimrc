@@ -1,5 +1,5 @@
 " Comments in Vimscript start with a `"`.
-
+"
 " If you open this file in Vim, it'll be syntax highlighted for you.
 
 " Vim is based on Vi. Setting `nocompatible` switches from the default
@@ -11,7 +11,7 @@
 " `vim -u foo`).
 set nocompatible
 
-
+filetype plugin indent on
 " Turn on syntax highlighting.
 syntax on
 
@@ -89,6 +89,11 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+" Store backup and the original file
+" With externsions .bak .orig
+:set patchmode=~o
+:set backup
+:set backupext=~
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -107,6 +112,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-fugitive'
+
+"Plug 'lervag/vimtex'
+"let g:tex_flavor = 'latex'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
