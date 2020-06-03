@@ -1,3 +1,3 @@
 function cdp --description 'Change to the projects folder'
-	cd ~/data/projects
+	cd ~/data/projects/"$argv"
 end

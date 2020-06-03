@@ -1,8 +1,9 @@
 #
 # STARTUP FUNCTIONS
-if status --is-login														# Export ENV variables
-    set -x PATH $PATH ~/data/projects/bin/  												# Projects/bin
-	set -x PATH $PATH /Library/Frameworks/Python.framework/Versions/3.7/bini		# python path
+if status --is-login															# Export ENV variables
+    set -x PATH $PATH ~/data/projects/bin/  									# Projects/bin
+	set -x PATH $PATH /Library/Frameworks/Python.framework/Versions/3.7/bini	# python path
+	set -x PATH $PATH /Applications/MATLAB_R2019a.app/bin						# matlab path
 end
 
 
