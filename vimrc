@@ -11,6 +11,8 @@
 " `vim -u foo`).
 set nocompatible
 
+"Fuzzyfinder shortcut
+:nnoremap K :Files<CR>
 filetype plugin indent on
 " Turn on syntax highlighting.
 syntax on
@@ -46,7 +48,7 @@ set backspace=indent,eol,start
 set hidden
 
 " Indicate column width 
-set colorcolumn=80
+set colorcolumn=72
 
 " This setting makes search case-insensitive when all characters in the string
 " being searched are lowercase. However, the search becomes case-sensitive if

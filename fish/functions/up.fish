@@ -1,3 +1,3 @@
 function up --description 'go one directory up'
-	cd .. $argv
+	cd ../$argv
 end

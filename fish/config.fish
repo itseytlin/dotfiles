@@ -1,10 +1,12 @@
 #
 # STARTUP FUNCTIONS
 if status --is-login
+	set -x PATH /opt/local/bin opt/local/sbin $PATH
     set -x PATH ~/data/projects/bin/ $PATH 
 	set -x PATH /Library/Frameworks/Python.framework/Versions/3.7/bini $PATH
 	set -x PATH /Applications/MATLAB_R2020a.app/bin $PATH
 	set -x PATH /Applications/Mathematica.app/Contents/MacOS $PATH
+	set -x PATH /Applications/mpv.app/Contents/MacOS $PATH
 end
 
 

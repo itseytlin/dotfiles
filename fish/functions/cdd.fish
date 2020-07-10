@@ -1,3 +1,3 @@
 function cdd --description 'Change to the data folder'
-	cd ~/data
+	cd ~/data/$argv
 end
