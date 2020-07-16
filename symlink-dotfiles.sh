@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 	
 # Function that creates an absolute path from a relative one for files and folders
 function realpath { echo $(cd $(dirname $1); pwd)/$(basename $1); }

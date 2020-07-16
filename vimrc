@@ -98,7 +98,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " With externsions .bak .orig
 :set patchmode=~o
 :set backup
-:set backupext=~
+:set backupext=~b
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
